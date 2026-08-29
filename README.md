@@ -17,6 +17,7 @@ Desenvolver autonomia lógica, modularização de código, tratamento de casos d
 ```text
 desafios-tecnicos/
 ├── transaction-system/    # Desafio 1: Processador de Transações Bancárias (Níveis 1 e 2)
+├── limit-manager/         # Desafio 2: Gerenciador de Limites de Crédito
 ├── README.md             # Documentação do repositório
 └── (desafios futuros)
 
@@ -33,6 +34,14 @@ Simulação de um processador de transações financeiras focado no gerenciament
 * **Nível 1:** Implementação da estrutura do contêiner para adicionar transações (`addTransaction`) e cancelar registros (`cancelTransaction`) garantindo controle de integridade de dados.
 * **Nível 2:** Processamento da média aritmética das transações (`getAverageTransaction`), tratando listas vazias com a caixinha de segurança `Optional<Double>` para evitar exceções de ponteiro nulo (`NullPointerException`).
 * **Tecnologias & Conceitos:** Java, `ArrayList`, Manipulação de Wrappers (`Double`, `Integer`), JUnit/Gradle e Validação com `Optional`.
+
+### 🟢 2. Limit Manager (`/limit-manager`)
+
+Simulação de um módulo de análise de limites de cartão de crédito.
+
+* **Nível 1:** Implementação da estrutura de armazenamento em memória para adição (`addLimit`) e revogação (`revokeLimit`) de limites.
+* **Nível 2:** Processamento e filtragem de limites superiores a determinado valor (`getLimitsAbove`), garantindo a preservação e imutabilidade da coleção original.
+* **Tecnologias & Conceitos:** Java, `ArrayList`, Laço *for-each*, Controle de Escopo Local e Filtragem de Coleções.
 
 ---
 
