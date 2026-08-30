@@ -16,8 +16,9 @@ Desenvolver autonomia lógica, modularização de código, tratamento de casos d
 
 ```text
 desafios-tecnicos/
-├── transaction-system/    # Desafio 1: Processador de Transações Bancárias (Níveis 1 e 2)
+├── transaction-system/    # Desafio 1: Processador de Transações Bancárias 
 ├── limit-manager/         # Desafio 2: Gerenciador de Limites de Crédito
+├── score-tracker/         # Desafio 3: Rastreador de Pontuações de Risco
 ├── README.md             # Documentação do repositório
 └── (desafios futuros)
 
@@ -33,6 +34,7 @@ Simulação de um processador de transações financeiras focado no gerenciament
 
 * **Nível 1:** Implementação da estrutura do contêiner para adicionar transações (`addTransaction`) e cancelar registros (`cancelTransaction`) garantindo controle de integridade de dados.
 * **Nível 2:** Processamento da média aritmética das transações (`getAverageTransaction`), tratando listas vazias com a caixinha de segurança `Optional<Double>` para evitar exceções de ponteiro nulo (`NullPointerException`).
+  
 * **Tecnologias & Conceitos:** Java, `ArrayList`, Manipulação de Wrappers (`Double`, `Integer`), JUnit/Gradle e Validação com `Optional`.
 
 ### 🟢 2. Limit Manager (`/limit-manager`)
@@ -41,7 +43,16 @@ Simulação de um módulo de análise de limites de cartão de crédito.
 
 * **Nível 1:** Implementação da estrutura de armazenamento em memória para adição (`addLimit`) e revogação (`revokeLimit`) de limites.
 * **Nível 2:** Processamento e filtragem de limites superiores a determinado valor (`getLimitsAbove`), garantindo a preservação e imutabilidade da coleção original.
+  
 * **Tecnologias & Conceitos:** Java, `ArrayList`, Laço *for-each*, Controle de Escopo Local e Filtragem de Coleções.
+
+### 🟢 3. Score Tracker (`/score-tracker`)
+Simulação de um rastreador de pontuações de risco para identificação e histórico de limites operacionais.
+
+* **Nível 1:** Registro de pontuações (`recordScore`) e remoção segura de registros (`removeScore`) via manipulação explícita de wrappers.
+* **Nível 2:** Busca do valor máximo armazenado (`getHighestScore`) integrado ao utilitário `Collections.max` e empacotamento com `Optional<Integer>`.
+
+* **Tecnologias & Conceitos:** Java, `ArrayList`, Wrappers (`Integer`), `Collections.max` e Tratativa de Borda.
 
 ---
 
@@ -54,8 +65,8 @@ git clone https://github.com/hssandrim/desafios-tecnicos.git
 ```
 
 
-2. Abra a subpasta do desafio desejado (ex: `transaction-system`) no IntelliJ IDEA ou na sua IDE de preferência.
-3. Execute os testes unitários da pasta `src/test/java` para validar a execução.
+2. Abra a subpasta do desafio desejado (ex: `transaction-system`, `score-tracker`, `limit-manager`) no IntelliJ IDEA ou na sua IDE de preferência.
+3. Execute o método `main` da classe para visualizar os testes e validações no console.
 
 ---
 
