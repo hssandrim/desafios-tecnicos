@@ -17,9 +17,9 @@ Desenvolver autonomia lógica, modularização de código, tratamento de casos d
 ```text
 desafios-tecnicos/
 ├── transaction-system/        # Desafio 1: Processador de Transações Bancárias
-├── order-discount-tracker/    # Desafio 4: Rastreador de Descontos de Pedidos
 ├── limit-manager/             # Desafio 2: Gerenciador de Limites de Crédito
 ├── score-tracker/             # Desafio 3: Rastreador de Pontuações de Risco
+├── order-discount-tracker/    # Desafio 4: Rastreador de Descontos de Pedidos
 ├── README.md                  # Documentação do repositório
 └── (desafios futuros)
 
