@@ -20,6 +20,7 @@ desafios-tecnicos/
 ├── limit-manager/             # Desafio 2: Gerenciador de Limites de Crédito
 ├── score-tracker/             # Desafio 3: Rastreador de Pontuações de Risco
 ├── order-discount-tracker/    # Desafio 4: Rastreador de Descontos de Pedidos
+├── cashback-account-system/   # Desafio 5: Sistema de Gestão de Contas e Cashback
 ├── README.md                  # Documentação do repositório
 └── (desafios futuros)
 
@@ -63,9 +64,18 @@ Simulação de um rastreador de descontos aplicados a pedidos de e-commerce para
 
 * **Tecnologias & Conceitos:** Java, `ArrayList`, Wrappers (`Double`), Autoboxing, laço `for-each`, acumuladores (`+=`) e tratamento de validação de dados.
 
----
+### 🟢 5. Cashback Account System (`/cashback-account-system`)
+Simulação de um módulo de gerenciamento de compras e acumulo de bonificações de cashback para cartões de crédito.
 
+* **Nível 1:** Implementação da estrutura de armazenamento em memória para adicionar compras (`addPurchase`) e cancelar registros (`cancelPurchase`) via remoção por valor (`Integer.valueOf`).
+* **Nível 2:** Processamento e cálculo de bonificação de **5% de cashback** exclusivo para compras acima de 100 (`getTotalCashback`), com tratamento seguro de lista vazia via `Optional<Double>`.
+* **Nível 3:** Cópia de segurança e ordenação crescente da coleção para cálculo da mediana de transações (`getMedianPurchase`), preservando o histórico de inserção original.
+* **Nível 4:** Filtragem dinâmica de compras de alto valor com base em um limiar mínimo flexível (`getHighValuePurchases`), retornando uma nova coleção sem alterar o estado do contêiner.
   
+* **Tecnologias & Conceitos:** Java, `ArrayList`, `Collections.sort`, Tratativa de Lista Vazia com `Optional`, laço *for-each*, Acumuladores (`+=`) e Filtros de Limiar.
+
+---
+ 
 ---
 
 ## 💻 Como Executar
