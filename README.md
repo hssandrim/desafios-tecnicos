@@ -16,11 +16,11 @@ Desenvolver autonomia lógica, modularização de código, tratamento de casos d
 
 ```text
 desafios-tecnicos/
-├── transaction-system/        # Desafio 1: Processador de Transações Bancárias
-├── limit-manager/             # Desafio 2: Gerenciador de Limites de Crédito
-├── score-tracker/             # Desafio 3: Rastreador de Pontuações de Risco
-├── order-discount-tracker/    # Desafio 4: Rastreador de Descontos de Pedidos
-├── cashback-account-system/   # Desafio 5: Sistema de Gestão de Contas e Cashback
+├── transaction-system/        # Desafio: Processador de Transações Bancárias
+├── limit-manager/             # Desafio: Gerenciador de Limites de Crédito
+├── score-tracker/             # Desafio: Rastreador de Pontuações de Risco
+├── order-discount-tracker/    # Desafio: Rastreador de Descontos de Pedidos
+├── cashback-account-system/   # Desafio: Sistema de Gestão de Contas e Cashback
 ├── README.md                  # Documentação do repositório
 └── (desafios futuros)
 
