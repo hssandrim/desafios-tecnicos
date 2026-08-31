@@ -16,10 +16,11 @@ Desenvolver autonomia lógica, modularização de código, tratamento de casos d
 
 ```text
 desafios-tecnicos/
-├── transaction-system/    # Desafio 1: Processador de Transações Bancárias 
-├── limit-manager/         # Desafio 2: Gerenciador de Limites de Crédito
-├── score-tracker/         # Desafio 3: Rastreador de Pontuações de Risco
-├── README.md             # Documentação do repositório
+├── transaction-system/        # Desafio 1: Processador de Transações Bancárias 
+├── limit-manager/             # Desafio 2: Gerenciador de Limites de Crédito
+├── score-tracker/             # Desafio 3: Rastreador de Pontuações de Risco
+├── order-discount-tracker/    # Desafio 4: Rastreador de Descontos de Pedidos
+├── README.md                  # Documentação do repositório
 └── (desafios futuros)
 
 ```
@@ -54,6 +55,17 @@ Simulação de um rastreador de pontuações de risco para identificação e his
 
 * **Tecnologias & Conceitos:** Java, `ArrayList`, Wrappers (`Integer`), `Collections.max` e Tratativa de Borda.
 
+### 🟢 4. Order Discount Tracker (`/order-discount-tracker`)
+Simulação de um rastreador de descontos aplicados a pedidos de e-commerce para análise de receita operacional e métricas de vendas.
+
+* **Nível 1:** Registro de pedidos (`addOrder`) permitindo apenas valores estritamente positivos e cancelamento seguro de pedidos (`cancelOrder`) de forma individual via remoção direta na lista.
+* **Nível 2:** Cálculo da receita total acumulada aplicando taxa de desconto flexível para pedidos acima do limite estabelecido (`getTotalDiscountRevenue`) e contagem filtrada de pedidos acima de um valor de corte (`countOrdersAbove`).
+
+* **Tecnologias & Conceitos:** Java, `ArrayList`, Wrappers (`Double`), Autoboxing, laço `for-each`, acumuladores (`+=`) e tratamento de validação de dados.
+
+---
+
+  
 ---
 
 ## 💻 Como Executar
