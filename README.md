@@ -21,6 +21,7 @@ desafios-tecnicos/
 ├── score-tracker/             # Desafio: Rastreador de Pontuações de Risco
 ├── order-discount-tracker/    # Desafio: Rastreador de Descontos de Pedidos
 ├── cashback-account-system/   # Desafio: Sistema de Gestão de Contas e Cashback
+├── digital-wallet-system/     # Desafio: Sistema de Carteira Digital e Recompensas
 ├── README.md                  # Documentação do repositório
 └── (desafios futuros)
 
@@ -73,6 +74,16 @@ Simulação de um módulo de gerenciamento de compras e acumulo de bonificaçõe
 * **Nível 4:** Filtragem dinâmica de compras de alto valor com base em um limiar mínimo flexível (`getHighValuePurchases`), retornando uma nova coleção sem alterar o estado do contêiner.
   
 * **Tecnologias & Conceitos:** Java, `ArrayList`, `Collections.sort`, Tratativa de Lista Vazia com `Optional`, laço *for-each*, Acumuladores (`+=`) e Filtros de Limiar.
+
+### 🟢 6. Digital Wallet System (`/digital-wallet-system`)
+Simulação de um módulo central de carteira digital para processar transações diárias e gerenciar recompensas de usuários.
+
+* **Nível 1:** Implementação de estado em memória para adicionar transações (`addTransaction`) e cancelar registros (`cancelTransaction`) com remoção segura por valor (`Integer.valueOf`).
+* **Nível 2:** Processamento de regras de negócio com cálculo de 10% de recompensa exclusivo para transações estritamente maiores que 150 (`calculateRewards`), com retorno seguro via `Optional<Double>`.
+* **Nível 3:** Cópia defensiva e ordenação crescente da coleção para cálculo da mediana de transações (`getMedianTransaction`), preservando o histórico de inserção original.
+* **Nível 4:** Filtragem inclusiva por intervalos flexíveis (`filterTransactionsByRange`), construindo uma nova coleção de retorno do zero para evitar modificações concorrentes (`ConcurrentModificationException`).
+
+* **Tecnologias & Conceitos:** Java, `ArrayList`, `Collections.sort`, Tratativa de Lista Vazia com `Optional`, `laço for-each`, Acumuladores e Imutabilidade de Iteradores.
 
 ---
  
