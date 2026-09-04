@@ -22,6 +22,7 @@ desafios-tecnicos/
 ├── order-discount-tracker/    # Desafio: Rastreador de Descontos de Pedidos
 ├── cashback-account-system/   # Desafio: Sistema de Gestão de Contas e Cashback
 ├── digital-wallet-system/     # Desafio: Sistema de Carteira Digital e Recompensas
+├── streaming-watch-tracker/   # Desafio: Rastreador de Sessões de Streaming
 ├── README.md                  # Documentação do repositório
 └── (desafios futuros)
 
@@ -32,7 +33,6 @@ desafios-tecnicos/
 ## 🛠️ Desafios Implementados
 
 ### 🟢 1. Transaction System (`/transaction-system`)
-
 Simulação de um processador de transações financeiras focado no gerenciamento de estados em memória e cálculos de indicadores.
 
 * **Nível 1:** Implementação da estrutura do contêiner para adicionar transações (`addTransaction`) e cancelar registros (`cancelTransaction`) garantindo controle de integridade de dados.
@@ -41,7 +41,6 @@ Simulação de um processador de transações financeiras focado no gerenciament
 * **Tecnologias & Conceitos:** Java, `ArrayList`, Manipulação de Wrappers (`Double`, `Integer`), JUnit/Gradle e Validação com `Optional`.
 
 ### 🟢 2. Limit Manager (`/limit-manager`)
-
 Simulação de um módulo de análise de limites de cartão de crédito.
 
 * **Nível 1:** Implementação da estrutura de armazenamento em memória para adição (`addLimit`) e revogação (`revokeLimit`) de limites.
@@ -84,6 +83,16 @@ Simulação de um módulo central de carteira digital para processar transaçõe
 * **Nível 4:** Filtragem inclusiva por intervalos flexíveis (`filterTransactionsByRange`), construindo uma nova coleção de retorno do zero para evitar modificações concorrentes (`ConcurrentModificationException`).
 
 * **Tecnologias & Conceitos:** Java, `ArrayList`, `Collections.sort`, Tratativa de Lista Vazia com `Optional`, `laço for-each`, Acumuladores e Imutabilidade de Iteradores.
+
+### 🟢 7. Streaming Watch Tracker (`/streaming-watch-tracker`)
+Simulação de um módulo de rastreamento de sessões de streaming de vídeo e cálculo de receita de anúncios baseada no engajamento dos usuários 
+
+* **Nível 1:** Registro de durações de sessões assistidas (`addSession`) e cancelamento de registros (`cancelSession`) utilizando a remoção segura por valor (`Integer.valueOf`) para evitar exclusão acidental por índice.
+* **Nível 2:** Processamento de regras de faturamento com cálculo de receita publicitária ($0.05 por minuto) exclusivamente para sessões estritamente maiores que 45 minutos (`calculateAdRevenue`), com tratamento seguro via `Optional<Double>`.
+* **Nível 3:** Ordenação crescente dos dados em uma cópia de segurança para o cálculo da mediana de tempo assistido (`getMedianSession`), preservando a ordem cronológica original na coleção principal.
+* **Nível 4:** Filtragem e exportação dinâmica de sessões altamente engajadas estritamente maiores que o limite de minutos informado (`getEngagedSessions`), gerando uma nova coleção isolada para evitar erros de concorrência (`ConcurrentModificationException`).
+
+* **Tecnologias & Conceitos:** Java, `ArrayList`, `Collections.sort`, Tratativa de Lista Vazia com `Optional`, `laço for-each`, Acumuladores, Condicionais Estritas, Modificador `final` e Encapsulamento de Atributos.
 
 ---
  
